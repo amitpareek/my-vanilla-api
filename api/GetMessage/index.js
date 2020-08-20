@@ -7,4 +7,7 @@ app.get("/:foo/:bar", (req, res) => {
     bar: req.params.bar,
   });
 });
+app.get("/message", (req, res) => {
+  res.json({ test: "Hello from Express!" });
+});
 module.exports = createHandler(app);
